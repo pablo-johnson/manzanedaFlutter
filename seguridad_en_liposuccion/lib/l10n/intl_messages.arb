@@ -1,0 +1,213 @@
+{
+  "@@last_modified": "2018-12-06T13:07:19.207480",
+  "title": "Safety In Liposuction",
+  "@title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "weightHint": "Enter your weight",
+  "@weightHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "volumeLabel": "Circulating Volume",
+  "@volumeLabel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "selectGenderLabel": "Gender",
+  "@selectGenderLabel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "maleGender": "Male 75 mL/Kg",
+  "@maleGender": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "femaleGender": "Female 65 mL/Kg",
+  "@femaleGender": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "minimumHemoglobin": "Minimum Hemoglobin",
+  "@minimumHemoglobin": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "initialHemoglobin": "Initial Hemoglobin",
+  "@initialHemoglobin": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ppsLabel": "Permissible Blood Loss",
+  "@ppsLabel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ageHint": "Enter your age",
+  "@ageHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ageUnit": "Years",
+  "@ageUnit": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ppgButtonLabel": "Calculate Permissible Fat Loss",
+  "@ppgButtonLabel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "pflMessage": "The Permissible Fat Loss is",
+  "@pflMessage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "disclaimerText1": "This predictive formula ",
+  "@disclaimerText1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "disclaimerText2": " is made for the exclusive use of plastic surgeons. The plastic surgeon can have with this application an approximation of how much fat can be sucked in a super-wet type liposuction, avoiding the possibility of carrying out a blood transfusion or the presentation of a greater complication.",
+  "@disclaimerText2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ppgTitle": "Permissible Fat Loss",
+  "@ppgTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "ppgTabTitle": "PFL",
+  "@ppgTabTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "rohrichScreenTitle": "Rohrich Formula",
+  "@rohrichScreenTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "rohrichTabTitle": "Rohrich",
+  "@rohrichTabTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aspiradoTotalHint": "Total Aspirate",
+  "@aspiradoTotalHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "infiltratedLiquidHint": "Liquid infiltrated by the surgeon",
+  "@infiltratedLiquidHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "intravenousFluidHint": "Endovenous liquid",
+  "@intravenousFluidHint": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "rohrichButtonLabel": "Get Result",
+  "@rohrichButtonLabel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "correctBalance": "Correct Hydric Balance",
+  "@correctBalance": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "superMessage": "Overhydrated in %s cc",
+  "@superMessage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "deficitMessage": "Volume deficit in %s cc",
+  "@deficitMessage": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "rohrichDisclaimerText": "This formula is used to evaluate the hydric balance of patients who undergo Super Wet type liposuction. formula:\nTo an AT < 5000 ml applies -> (AT x 1.8 = LI + LE)\nFor an AT > 5001ml applies -> (AT x 1.2 = LI + LE)\nWhere: AT = total aspirate LI = infiltrated liquid LE = intravenous fluid\nRohrich RJ, Jason E, Leedy, Swamy JR. Fluid resuscitation in liposuction: a retrospective review of 89 consecutive patients. Plast Reconstr Surg. 2006; 117: 431-6",
+  "@rohrichDisclaimerText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bibliographyTitle": "Bibliography",
+  "@bibliographyTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "bibliographyTabTitle": "Bibliography",
+  "@bibliographyTabTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "researchWorkLabel": "Research work ",
+  "@researchWorkLabel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutUsTitle": "Who are we?",
+  "@aboutUsTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "aboutUsTabTitle": "About Us",
+  "@aboutUsTabTitle": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "raulName": "Dr. Raúl Manzaneda Cipriani",
+  "@raulName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "biography1": "Plastic and Reconstructive Surgeon\nCMP : 51022\nRNE : 26404\nwww.drmanzanedacipriani.com.pe\nnrmanzanedacipriani@hotmail.com",
+  "@biography1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "fiorellaName": "Dra. Fiorella Cano Guerra",
+  "@fiorellaName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "biography3": "Plastic and Reconstructive Surgeon\nCMP : 60040\nRNE : 33339\nfiorelladcanoguerra@gmail.com",
+  "@biography3": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "welcomeText": "Note: This application comes from a study conducted with the aim of having available an individualized and simple way of estimating how much fat we could extract without increasing the risk of complications or the need for blood transfusions; using a predictive model; adapted for a free computer application called Safety in Liposuction/Allowable Fat Loss, for use in computers, cell phones and tablets.",
+  "@welcomeText": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "disclaimerButtonLabel": "Accept",
+  "@disclaimerButtonLabel": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appNameLogo1": "SAFETY IN ",
+  "@appNameLogo1": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appNameLogo2": "LIPOSUCTION",
+  "@appNameLogo2": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "appSubtitleLogo": "PERMISSIBLE LOSS OF FAT",
+  "@appSubtitleLogo": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "done": "Done",
+  "@done": {
+    "type": "text",
+    "placeholders": {}
+  }
+}
