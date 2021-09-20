@@ -6,6 +6,10 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 
 class PPG extends StatefulWidget {
+
+  static const String PAPER_URL = "https://drive.google.com/file/d/1ckswqWcVgOcvpE3meApcrhuDDNMo_z8_";
+  // static const String PAPER_URL = "https://drive.google.com/file/d/1jv28RH_PO2uSZVnqtN4cqyzEfEULAkCT";
+
   @override
   _PPGState createState() => _PPGState();
 }
@@ -76,11 +80,7 @@ class _PPGState extends State<PPG> {
   }
 
   _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
+    await launch(url);
   }
 
   _onLayoutDone(_) {
@@ -416,8 +416,7 @@ class _PPGState extends State<PPG> {
               color: primarySwatch['accent'],
             ),
             recognizer: new TapGestureRecognizer()
-              ..onTap = () => _launchURL(
-                  "https://drive.google.com/file/d/1jv28RH_PO2uSZVnqtN4cqyzEfEULAkCT"),
+              ..onTap = () => _launchURL(PPG.PAPER_URL),
           ),
           new TextSpan(
             text: SitLocalizations.of(context).disclaimerText2,
@@ -459,53 +458,69 @@ class _PPGState extends State<PPG> {
       ),
     );
 
-    Widget actionForm = FormKeyboardActions(
-      keyboardActionsPlatform: KeyboardActionsPlatform.IOS,
-      keyboardBarColor: primarySwatch["containerBackground"],
-      nextFocus: true, 
-      actions: [
-        KeyboardAction(
-          focusNode: _nodeText1,
-          closeWidget: IconButton(
-            icon: Icon(Icons.close),
-            onPressed: () {
-              _hideKeyboard();
+    Widget actionForm = KeyboardActions(
+      config: KeyboardActionsConfig(
+        keyboardActionsPlatform: KeyboardActionsPlatform.IOS,
+        keyboardBarColor: primarySwatch["containerBackground"],
+        nextFocus: true,
+        actions: [
+          KeyboardActionsItem(
+            focusNode: _nodeText1,
+            toolbarButtons: [
+              (node) {
+                return IconButton(
+                  icon: Icon(Icons.close),
+                  onPressed: () {
+                    _hideKeyboard();
+                  },
+                );
+              },
+            ],
+          ),
+          KeyboardActionsItem(
+            focusNode: _nodeText2,
+            toolbarButtons: [
+              (node) {
+                return IconButton(
+                  icon: Icon(Icons.close),
+                  onPressed: () {
+                    _hideKeyboard();
+                  },
+                );
+              },
+            ],
+          ),
+          KeyboardActionsItem(
+            focusNode: _nodeText3,
+            toolbarButtons: [
+              (node) {
+                return Container(
+                  padding:
+                      EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+                  child: Text(
+                    SitLocalizations.of(context).done,
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                );
+              },
+            ],
+            onTapAction: () {
+              if (_isPpgButtonEnabled) {
+                FocusScope.of(context).requestFocus(new FocusNode());
+                setState(
+                  () {
+                    _ppg = _calculatePpg();
+                    _isPpgVisible = true;
+                  },
+                );
+              }
             },
           ),
-          displayCloseWidget: true,
-        ),
-        KeyboardAction(
-          focusNode: _nodeText2,
-          closeWidget: IconButton(
-            icon: Icon(Icons.close),
-            onPressed: () {
-              _hideKeyboard();
-            },
-          ),
-        ),
-        KeyboardAction(
-          focusNode: _nodeText3,
-          closeWidget: Container(
-            padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
-            child: Text(
-              SitLocalizations.of(context).done,
-              style: TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
-          onTapAction: () {
-            if (_isPpgButtonEnabled) {
-              FocusScope.of(context).requestFocus(new FocusNode());
-              setState(() {
-                _ppg = _calculatePpg();
-                _isPpgVisible = true;
-              });
-            }
-          },
-        ),
-      ],
+        ],
+      ),
       child: safeArea,
     );
 

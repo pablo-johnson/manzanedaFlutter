@@ -63,8 +63,7 @@ class _MainState extends State<TabHost> with TickerProviderStateMixin {
               color: primarySwatch['accent'],
             ),
             recognizer: new TapGestureRecognizer()
-              ..onTap = () => _launchURL(
-                  "https://drive.google.com/file/d/1jv28RH_PO2uSZVnqtN4cqyzEfEULAkCT"),
+              ..onTap = () => _launchURL(PPG.PAPER_URL),
           ),
           new TextSpan(
             text: SitLocalizations.of(context).disclaimerText2,

@@ -94,6 +94,7 @@ class _SplashState extends State<Splash> {
       child: Center(
         child: Text(
           SitLocalizations.of(context).appSubtitleLogo,
+          textAlign: TextAlign.center,
           style: TextStyle(
             fontFamily: 'Massa',
             fontSize: 26.0,

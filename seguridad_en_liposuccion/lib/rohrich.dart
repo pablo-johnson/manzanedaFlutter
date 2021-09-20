@@ -304,53 +304,66 @@ class _RohrichState extends State<Rohrich> {
       ),
     );
 
-    Widget actionForm = FormKeyboardActions(
-      keyboardActionsPlatform: KeyboardActionsPlatform.IOS,
-      keyboardBarColor: primarySwatch["containerBackground"],
-      nextFocus: true,
-      actions: [
-        KeyboardAction(
-          focusNode: _nodeText1,
-          closeWidget: IconButton(
-            icon: Icon(Icons.close),
-            onPressed: () {
-              _hideKeyboard();
+    Widget actionForm = KeyboardActions(
+      config: KeyboardActionsConfig(
+        keyboardActionsPlatform: KeyboardActionsPlatform.IOS,
+        keyboardBarColor: primarySwatch["containerBackground"],
+        nextFocus: true,
+        actions: [
+          KeyboardActionsItem(
+            focusNode: _nodeText1,
+            toolbarButtons: [
+                  (node) {
+                return IconButton(
+                  icon: Icon(Icons.close),
+                  onPressed: () {
+                    _hideKeyboard();
+                  },
+                );
+              },
+            ],
+          ),
+          KeyboardActionsItem(
+            focusNode: _nodeText2,
+            toolbarButtons: [
+                  (node) {
+                return IconButton(
+                  icon: Icon(Icons.close),
+                  onPressed: () {
+                    _hideKeyboard();
+                  },
+                );
+              },
+            ],
+          ),
+          KeyboardActionsItem(
+            focusNode: _nodeText3,
+            toolbarButtons: [
+                  (node) {
+                return Container(
+                  padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+                  child: Text(
+                    SitLocalizations.of(context).done,
+                    style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                );
+              },
+            ],
+            onTapAction: () {
+              if (_isResultButtonEnabled) {
+                setState(() {
+                  _rohrich = _calculateRohrich();
+                  _isResultVisible = true;
+                  _hideKeyboard();
+                });
+              }
             },
           ),
-          displayCloseWidget: true,
-        ),
-        KeyboardAction(
-          focusNode: _nodeText2,
-          closeWidget: IconButton(
-            icon: Icon(Icons.close),
-            onPressed: () {
-              _hideKeyboard();
-            },
-          ),
-        ),
-        KeyboardAction(
-          focusNode: _nodeText3,
-          closeWidget: Container(
-            padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
-            child: Text(
-              SitLocalizations.of(context).done,
-              style: TextStyle(
-                fontSize: 16.0,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
-          onTapAction: () {
-            if (_isResultButtonEnabled) {
-              setState(() {
-                _rohrich = _calculateRohrich();
-                _isResultVisible = true;
-                _hideKeyboard();
-              });
-            }
-          },
-        ),
-      ],
+        ],
+      ),
       child: safeArea,
     );
 

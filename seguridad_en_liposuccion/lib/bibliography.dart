@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seguridad_en_liposuccion/ppg.dart';
 import 'lang/sit_localizations.dart';
 import 'main.dart';
 import 'package:flutter/gestures.dart';
@@ -59,7 +60,7 @@ class _BibliographyState extends State<Bibliography> {
               ),
               recognizer: new TapGestureRecognizer()
                 ..onTap = () => _launchURL(
-                    "https://drive.google.com/file/d/1jv28RH_PO2uSZVnqtN4cqyzEfEULAkCT"),
+                    PPG.PAPER_URL),
             ),
           ],
         ),
